@@ -1,24 +1,25 @@
+
 body {
-    background-color: #FFFFE0; /* Warna Kuning Cerah */
-    font-family: Arial, sans-serif; /* Jenis huruf */
-    color: #191970; /* Warna teks utama (BIru Gelap) */
+    background-color: #FFFFE0;
+    font-family: Arial, sans-serif;
+    color: #191970;
 }
 
 .kartu-profil {
     width: 300px;
-    margin: 50px auto; /* 50px jarak atas/bawah' auto menengahkan kiri/kanan */
+    margin: 50px auto;
     padding: 20px;
     background-color: white;
-    border-radius: 15px; /* Membuat sudu menjadi melengkung */
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .kartu-profil img {
     width: 150px;
-    border-radius: 50%; /* Trik untuk membuat gambar persegi menjadi lingkaran */
-}
-
-.kartu-profil {
-    /* ... (kode dari slide sebelumnya) ... */
-    text-align: center; /* Menengahkan semua teks di dalam kartu*/
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
 }
