@@ -1,25 +1,24 @@
-
 body {
-    background-color: #FFFFE0; /* Warna Kuning Cerah */
-    font-family: Arial, sans-serif; /* Jenis huruf yang bersih dan mudah dibaca */
-    color: #191970; /* Warna teks utama (Biru Gelap) */
+    background-color: #FFFFE0; /* Warna Kuning Cerah*/
+    font-family: Arial, sans-serif; /Jenis huruf yang bersih dan mudah dibaca/
+    color: #191970; /* Warna teks utama (BIru Gelap) */
 }
 
 .kartu-profil {
     width: 300px;
-    margin: 50px auto; /* Jarak atas/bawah 50px, otomatis menengahkan */
+    margin: 50px auto; /* 50px jarak atas/bawah' auto menengahkan kiri/kanan */
     padding: 20px;
     background-color: white;
-    border-radius: 15px; /* Membuat sudut menjadi melengkung */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
-    text-align: center; /* Menengahkan semua teks di dalam kartu */
+    border-radius: 15px; /* Membuat sudu menjadi melengkung */
+    box-shadow: 0 4px 8px rgba(0,0,0,0,1); /* Efek bayangan */
 }
 
 .kartu-profil img {
     width: 150px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%; /* Membuat gambar menjadi oval */
-    display: block;
-    margin: 0 auto 15px;
+    border-radius: 50%; /* Trik untuk membuat gambar persegi menjadi lingkaran */
+}
+
+.kartu-profil {
+    /* ... (kode dari slide sebelumnya) ... */
+    text-align: center; /* Menengahkan semua teks di dalam kartu*/
 }
