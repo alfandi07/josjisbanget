@@ -1,24 +1,28 @@
 body {
-    background-color: #ffffe0;
-    font-family: Arial, sans-serif;
-    color: #000753;
+    background-color: #FFFFE0; /* Warna Kuning Cerah*/
+    font-family: Arial, sans-serif; /Jenis huruf yang bersih dan mudah dibaca/
+    color: #191970; /* Warna teks utama (BIru Gelap) */
 }
 
 .kartu-profil {
-    background-color: white;
-    width: 250px;
+    width: 300px;
+    margin: 50px auto; /* 50px jarak atas/bawah' auto menengahkan kiri/kanan */
     padding: 20px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    margin: 50px auto;
+    background-color: white;
+    border-radius: 15px; /* Membuat sudu menjadi melengkung */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
 }
 
 .kartu-profil img {
-    width: 120px;
-    height: 180px;
+    width: 100px;
+    height: 140px;
     object-fit: cover;
     border-radius: 50%;
     display: block;
     margin: 0 auto 15px;
+}
+
+.kartu-profil {
+    /* ... (kode dari slide sebelumnya) ... */
+    text-align: center;. /* Menengahkan semua teks di dalam kartu*/
 }
