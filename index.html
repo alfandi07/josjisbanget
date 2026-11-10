@@ -1,34 +1,42 @@
-<section class="qr-section">
-    <h2>QR Code Siswa Kelas XI</h2>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi SMAN 1 Bendungan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div class="qr-container">
-        <div class="qr-card">
-            <h3>Alfandi</h3>
-            <p>NIS: 001</p>
-            <div id="qr001"></div>
-            <button onclick="downloadQR('qr001', 'QR-Alfandi')">
-                Download QR
-            </button>
-        </div>
+    <section id="halamanAwal" class="halaman">
+        <h1>Selamat Datang!</h1>
+        <h2>SMAN 1 Bendungan</h2>
+        <p>Sistem Absensi Siswa Kelas XI</p>
+        <button onclick="mulaiAbsensi()">Mulai Absensi</button>
+    </section>
 
-        <div class="qr-card">
-            <h3>Putri</h3>
-            <p>NIS: 002</p>
-            <div id="qr002"></div>
-            <button onclick="downloadQR('qr002', 'QR-Putri')">
-                Download QR
-            </button>
-        </div>
+    <section id="halamanSiswa" class="halaman" style="display:none;">
+        <h2>Daftar Siswa</h2>
+        <p>Silakan pilih nama Anda</p>
 
-        <div class="qr-card">
-            <h3>Kholis</h3>
-            <p>NIS: 003</p>
-            <div id="qr003"></div>
-            <button onclick="downloadQR('qr003', 'QR-Kholis')">
-                Download QR
-            </button>
-        </div>
-    </div>
-</section>
+        <div id="daftarSiswa"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+        <button onclick="kembali()">Kembali</button>
+    </section>
+
+    <section id="halamanQR" class="halaman" style="display:none;">
+        <h2>QR Code Absensi</h2>
+        <h3 id="namaSiswa"></h3>
+        <p id="nisSiswa"></p>
+
+        <div id="kodeQR"></div>
+
+        <p>Silakan tunjukkan QR Code kepada petugas.</p>
+
+        <button onclick="kembaliKeSiswa()">Kembali</button>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
