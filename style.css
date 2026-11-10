@@ -1,25 +1,29 @@
-
-body {
-    background-color: #FFFFE0;
-    font-family: Arial, sans-serif;
-    color: #191970;
-}
-
-.kartu-profil {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.qr-section {
     text-align: center;
+    padding: 20px;
 }
 
-.kartu-profil img {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 15px;
+.qr-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.qr-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #0002;
+    width: 190px;
+}
+
+.qr-card button {
+    margin-top: 12px;
+    padding: 10px;
+    background: #1769aa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
