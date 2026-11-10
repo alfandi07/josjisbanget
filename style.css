@@ -4,15 +4,14 @@ body {
     color: #000753; /* Warna teks utama (BIru Gelap) */
 }
 
-.kartu-profil {
-    width: 300px;
-    margin: 50px auto; /* 50px jarak atas/bawah' auto menengahkan kiri/kanan */
-    padding: 20px:
-    background-color: white;
-    border-radius: 15px; /* Membuat sudu menjadi melengkung */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
+.kartu-profil img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
 }
-
 kartu-profil {
     /* ... (kode dari slide sebelumnya) ... */
     text-align: center; /* Menengahkan semua teks di dalam kartu*/
