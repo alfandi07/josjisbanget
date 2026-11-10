@@ -1,30 +1,52 @@
-// Membuat QR Code setiap siswa
-new QRCode(document.getElementById("qr001"), {
-    text: "001",
-    width: 150,
-    height: 150
-});
+const siswa = [
+    { nama: "Alfandi", nis: "001" },
+    { nama: "Putri", nis: "002" },
+    { nama: "Kholis", nis: "003" }
+];
 
-new QRCode(document.getElementById("qr002"), {
-    text: "002",
-    width: 150,
-    height: 150
-});
+function mulaiAbsensi() {
+    document.getElementById("halamanAwal").style.display = "none";
+    document.getElementById("halamanSiswa").style.display = "block";
 
-new QRCode(document.getElementById("qr003"), {
-    text: "003",
-    width: 150,
-    height: 150
-});
+    const daftar = document.getElementById("daftarSiswa");
+    daftar.innerHTML = "";
 
-// Mengunduh QR Code
-function downloadQR(id, namaFile) {
-    const qr = document.querySelector(#${id} img);
+    siswa.forEach(data => {
+        daftar.innerHTML += `
+            <div class="siswa">
+                <h3>${data.nama}</h3>
+                <p>NIS: ${data.nis}</p>
+                <button onclick="tampilkanQR('${data.nama}', '${data.nis}')">
+                    Tampilkan QR Code
+                </button>
+            </div>
+        `;
+    });
+}
 
-    if (qr) {
-        const link = document.createElement("a");
-        link.href = qr.src;
-        link.download = namaFile + ".png";
-        link.click();
-    }
+function tampilkanQR(nama, nis) {
+    document.getElementById("halamanSiswa").style.display = "none";
+    document.getElementById("halamanQR").style.display = "block";
+
+    document.getElementById("namaSiswa").textContent = nama;
+    document.getElementById("nisSiswa").textContent = "NIS: " + nis;
+
+    const tempatQR = document.getElementById("kodeQR");
+    tempatQR.innerHTML = "";
+
+    new QRCode(tempatQR, {
+        text: nis,
+        width: 200,
+        height: 200
+    });
+}
+
+function kembali() {
+    document.getElementById("halamanSiswa").style.display = "none";
+    document.getElementById("halamanAwal").style.display = "block";
+}
+
+function kembaliKeSiswa() {
+    document.getElementById("halamanQR").style.display = "none";
+    document.getElementById("halamanSiswa").style.display = "block";
 }
