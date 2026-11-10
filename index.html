@@ -1,30 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya</title>
+
+    <title>Absensi Sekolah QR Code</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
+
 <body>
 
-    <div class="kartu-profil">
+    <div class="container">
 
-        <img src="kartu.profil.jpeg" alt="Foto profil saya">
+        <header>
+            <h1>ABSENSI SEKOLAH</h1>
+            <p>Sistem Absensi Berbasis QR Code</p>
+        </header>
 
-        <h1>Alfandi Putra Pratama</h1>
+        <section class="dashboard">
 
-        <p>
-            Saya adalah siswa yang tertarik dengan teknologi
-            dan desain. Oleh karena itu saya ikut pelantikan TIK.
-        </p>
+            <div class="card">
+                <h3>Total Siswa</h3>
+                <h2 id="totalSiswa">0</h2>
+            </div>
 
-        <a href="https://www.instagram.com/alpangantengpol" target="_blank">
-            Kunjungi Instagram saya
-        </a>
+            <div class="card">
+                <h3>Siswa Hadir</h3>
+                <h2 id="totalHadir">0</h2>
+            </div>
 
-        <button id="sapaButton">Sapa Saya!</button>
+            <div class="card">
+                <h3>Belum Hadir</h3>
+                <h2 id="belumHadir">0</h2>
+            </div>
+
+        </section>
+
+        <section class="content">
+
+            <h2>Scan QR Code</h2>
+
+            <div id="reader"></div>
+
+            <p id="pesan">Silakan scan QR Code siswa.</p>
+
+            <hr>
+
+            <h2>Tambah Data Siswa</h2>
+
+            <input type="text" id="nama" placeholder="Nama siswa">
+
+            <input type="text" id="nis" placeholder="Nomor Induk Siswa">
+
+            <input type="text" id="kelas" placeholder="Kelas">
+
+            <button onclick="tambahSiswa()">
+                Tambahkan Siswa
+            </button>
+
+            <hr>
+
+            <h2>Daftar Kehadiran</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>NIS</th>
+                            <th>Kelas</th>
+                            <th>Tanggal</th>
+                            <th>Jam</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftarAbsensi"></tbody>
+
+                </table>
+
+            </div>
+
+            <button onclick="downloadLaporan()">
+                Download Laporan
+            </button>
+
+        </section>
 
     </div>
 
