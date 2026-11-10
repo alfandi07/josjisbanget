@@ -1,29 +1,67 @@
-.qr-section {
-    text-align: center;
-    padding: 20px;
+.{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.qr-container {
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #075985, #38bdf8);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.qr-card {
-    background: white;
+    align-items: center;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px #0002;
-    width: 190px;
 }
 
-.qr-card button {
-    margin-top: 12px;
-    padding: 10px;
-    background: #1769aa;
+.halaman {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px #0003;
+}
+
+h1 {
+    color: #075985;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #0284c7;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 15px 0;
+    color: #555;
+}
+
+button {
+    background: #0284c7;
     color: white;
     border: none;
-    border-radius: 8px;
+    padding: 12px 22px;
+    border-radius: 25px;
     cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background: #075985;
+}
+
+.siswa {
+    background: #e0f2fe;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 12px;
+}
+
+#kodeQR {
+    display: flex;
+    justify-content: center;
+    margin: 25px auto;
 }
